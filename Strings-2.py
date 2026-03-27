@@ -72,8 +72,8 @@ def reverse_word_sentence(string):
 #         words[index] = words[index][::-1]
 #     return " ".join(words)
 
-string = input()
-print(reverse_word_sentence(string))
+# string = input()
+# print(reverse_word_sentence(string))
 
 # 4️⃣ First Non-Repeating Character
 # Input:
@@ -140,16 +140,33 @@ def remove_duplicates(string):
 # acbd
 # Output:
 # False
+# def rotation_check(string1, string2): #complicated
+#     if len(string1) != len(string2):
+#         return False
+#     first, second, pos = 0, 0, 0
+#     while(True):
+#         print(first, second, pos)
+#         if second == len(string2) and pos == len(string2):
+#             return True
+#         elif second != len(string2) and first == len(string1):
+#             first = 0
+#         elif second == len(string2) and pos != len(string2):
+#             return False
+#         elif string1[first] == string2[second]:
+#             first += 1
+#             second += 1
+#             pos += 1
+#         else:
+#             first += 1
+#             pos = 0
+
 def rotation_check(string1, string2):
     if len(string1) != len(string2):
         return False
-    first, second = 0, 0
-    while(True):
-        if second == len(string2):
-            if first
-        if string1[first] == string2[second]:
-            if second != len(string2) and first == len(string1) - 1:
-                first = 0
-            second += 1
-        else:
-            first += 1
+    return string2 in (string1+string1)
+
+string1 = input()
+string2 = input()
+print(rotation_check(string1, string2))
+
+            
