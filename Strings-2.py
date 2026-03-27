@@ -168,5 +168,6 @@ def rotation_check(string1, string2):
 string1 = input()
 string2 = input()
 print(rotation_check(string1, string2))
+# print(rotation_index(string1, string2))
 
             
