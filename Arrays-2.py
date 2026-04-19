@@ -221,5 +221,22 @@ def kadanes_algorithm(array):
 # 1 2 3 4 5 6
 
 def merge_arrays(array1, array2): # wrong
-    return array1 + array2
-print(*merge_arrays([1,2], [3,4,5]))
+    new_array = []
+    index1 = 0
+    index2 = 0
+    while(index1 < len(array1) and index2 < len(array2)):
+        if array1[index1] <= array2[index2]:
+            new_array.append(array1[index1])
+            index1 += 1
+        else:
+            new_array.append(array2[index2])
+            index2 += 1
+    while(index1 < len(array1)):
+        new_array.append(array1[index1])
+        index1 += 1
+    while(index2 < len(array2)):
+        new_array.append(array2[index2])
+        index2 += 1
+    return new_array
+
+print(*merge_arrays([1,2], [3,4,5])) 
